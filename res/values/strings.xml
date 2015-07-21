@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- 设置view的多个tag时，需要唯一的id -->
+    <item name="btn_flag_first_tag" type="id"/>
+    <item name="btn_flag_secend_tag" type="id"/>
+</resources>

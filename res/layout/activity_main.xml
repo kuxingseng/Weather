@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:alpha="0.6"
+    android:background="@drawable/bg_snow_night" >
+
+    <RelativeLayout
+        android:id="@+id/main_top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        	
+        	<!-- 标题 -->
+		    <TextView
+		        android:id="@+id/text_title"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentTop="true"
+		        android:layout_marginTop="8dp"
+		        android:gravity="center_horizontal"
+		        android:text="text"
+		        android:textColor="#fff"
+		        android:textSize="22sp" />
+		    
+		    <!-- 日期 -->		    <TextView
+		        android:id="@+id/text_date"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:text="7月8日 星期三"
+		        android:textColor="#a1a3a6"
+		        android:textSize="14sp"
+		        android:layout_marginTop="4dp"
+		         android:layout_below="@id/text_title" />
+		    
+		    <!-- 页面指示器 -->
+		    <LinearLayout
+		        android:id="@+id/page_indicator_container"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" 
+		        android:gravity="center_horizontal"
+		        android:layout_marginTop="4dp"
+		        android:layout_below="@id/text_date">
+		    </LinearLayout>
+
+		    <Button
+		        android:id="@+id/btn_city_list"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:layout_marginTop="0dp"
+		        android:layout_marginBottom="0dp"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:background="@drawable/city_btn" />
+		    
+		    <Button
+		        android:id="@+id/btn_share"
+		        android:layout_width="48dp"
+		        android:layout_height="48dp"
+		        android:layout_marginTop="0dp"
+		        android:layout_marginBottom="0dp"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentTop="true"
+		        android:background="@drawable/common_title_share" />
+		    
+    </RelativeLayout>    
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_top_menu">
+		    
+        <!-- viewePager -->
+    	<android.support.v4.view.ViewPager  
+            android:id="@+id/pages"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="5dp" 
+            android:layout_gravity="center" >   
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</RelativeLayout>

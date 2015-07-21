@@ -1,0 +1,52 @@
+{
+	"citylist": [{
+		"cityName": "北京市",
+		"cityCode": "101010100",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},
+	{
+		"cityName": "上海市",
+		"cityCode": "101020100",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},{
+		"cityName": "广州市",
+		"cityCode": "101010101",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},
+	{
+		"cityName": "深圳市",
+		"cityCode": "101020102",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},{
+		"cityName": "天津市",
+		"cityCode": "101010103",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},
+	{
+		"cityName": "杭州市",
+		"cityCode": "101020104",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},{
+		"cityName": "南京市",
+		"cityCode": "101020105",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},{
+		"cityName": "合肥市",
+		"cityCode": "101010106",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	},
+	{
+		"cityName": "蚌埠市",
+		"cityCode": "101020107",
+		"cityWeatherType": 1,
+		"cityTemp": "0~0"
+	}]
+}
