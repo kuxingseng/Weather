@@ -3,6 +3,7 @@ package com.example.weather.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -71,6 +72,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	private boolean isFromAddCityActivity;	//是否是从添加城市页面来，若是定位到最后一个
 	private boolean isNeedRefresh;		//是否需要重新初始化数据，若从城市编辑界面返回并且无删除操作，不需要刷新
+	
+	private long exitTime; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -188,7 +191,7 @@ public class MainActivity extends Activity implements OnClickListener{
 						//同时把定位的记录加入到当前选中城市表
 						SelectedCity selectedCity = new SelectedCity();
 						selectedCity.setCityName(cityName);
-						selectedCity.setCityCode("101020100");
+						selectedCity.setCityCode("CN101020100");
 						selectedCity.setCityWeatherType(1);
 						selectedCity.setCityTemp("24~28");
 						selectedCitys.add(selectedCity);
@@ -200,7 +203,7 @@ public class MainActivity extends Activity implements OnClickListener{
 					}else{
 						//自动打开选择城市界面
 						Toast.makeText(MainActivity.this, "定位失败，请手动选择城市", Toast.LENGTH_LONG).show();
-						MainActivity.this.startActivity(new Intent(MainActivity.this,CityEditorActivity.class));
+						MainActivity.this.startActivity(new Intent(MainActivity.this,CityEditorActivity.class));                                                                                                                                                                                                                                                                                                                                                                                                 
 					}
 				}
 			});
@@ -262,18 +265,31 @@ public class MainActivity extends Activity implements OnClickListener{
 	private String refreshTime;
 	private void getWeatherByCityCode(int index){
 		LoadingUtil.showLoading(MainActivity.this, "更新天气信息...");
-		String address = "http://www.weather.com.cn/adat/cityinfo/"+selectedCitys.get(index)+".html";
-		HttpUtil.sendHttpRequset(address, HttpUtil.HTTP_GET, new HttpCallbackListener() {
+		//接口以废弃
+		//String address = "http://www.weather.com.cn/adat/cityinfo/"+selectedCitys.get(index)+".html";
+		//和风天气
+		String address = "http://api.heweather.com/x3/weather?cityid="+selectedCitys.get(index).getCityCode()+"&key=68f3abe177f7451b9ffd05e5ccaaf0de";
+		//LogUtil.e("chenshuai", "address:"+address);
+		HttpUtil.sendHttpRequset(address, HttpUtil.HTTP_POST, new HttpCallbackListener() {
 			@Override
 			public void onFinish(String response) {
 				//LogUtil.e("chenshuai", response);
 				try {
 					JSONObject jsonObject = new JSONObject(response);
-					JSONObject jsonObject1 = jsonObject.getJSONObject("weatherinfo");
-					lowTemp=jsonObject1.getString("temp2");
-					heighTemp=jsonObject1.getString("temp1");
-					desc=jsonObject1.getString("weather");
-					refreshTime=jsonObject1.getString("ptime");
+					JSONArray array=jsonObject.getJSONArray("HeWeather data service 3.0");
+					JSONObject obj1 = array.getJSONObject(0);
+					JSONObject obj2 = obj1.getJSONObject("basic");
+					JSONObject obj3=obj2.getJSONObject("update");
+					refreshTime=obj3.getString("loc");
+					
+					JSONArray dailyArray=obj1.getJSONArray("daily_forecast");
+					JSONObject firstDailyObj=dailyArray.getJSONObject(0);
+					JSONObject tempObj = firstDailyObj.getJSONObject("tmp");
+					lowTemp=tempObj.getString("min");
+					heighTemp=tempObj.getString("max");
+					
+					JSONObject condObj=firstDailyObj.getJSONObject("cond");
+					desc=condObj.getString("txt_n");
 					
 					runOnUiThread(new Runnable() {
 						public void run() {
@@ -285,7 +301,7 @@ public class MainActivity extends Activity implements OnClickListener{
 							textWeatherDesc.setText(desc);
 							
 							textTEMP=(TextView)view.findViewById(R.id.page_TEMP);
-							textTEMP.setText(lowTemp+"~"+heighTemp);
+							textTEMP.setText(lowTemp+"°C~"+heighTemp+"°C");
 							
 							Toast.makeText(MainActivity.this, "更新天气成功", Toast.LENGTH_SHORT).show();
 							LoadingUtil.hideLoading();
@@ -372,6 +388,15 @@ public class MainActivity extends Activity implements OnClickListener{
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if(keyCode==KeyEvent.KEYCODE_BACK){
 			
+			if(System.currentTimeMillis()-exitTime>2000){
+				Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+				exitTime=System.currentTimeMillis();
+			}else{
+				finish();
+				System.exit(0);
+			}
+			
+			return true;
 		}
 		return super.onKeyDown(keyCode, event);
 	}

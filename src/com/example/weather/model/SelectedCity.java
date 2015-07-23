@@ -2,10 +2,10 @@ package com.example.weather.model;
 
 public class SelectedCity {
 	private int id;
-	private String cityName;
-	private String cityCode;
-	private int cityWeatherType;
-	private String cityTemp;
+	private String cityName;	//城市名称
+	private String cityCode;	//城市id
+	private int cityWeatherType;	//是否被选中
+	private String cityTemp;	//温度区间
 	
 	public int getId() {
 		return id;

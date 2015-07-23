@@ -9,6 +9,75 @@ package com.example.weather;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int ptr_content=0x7f010001;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_duration_to_close=0x7f010004;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_duration_to_close_header=0x7f010005;
+        /**  Optional. If you put header and content in xml, you can you these to specify them. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int ptr_header=0x7f010000;
+        /**  keep header when refreshing
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_keep_header_when_refresh=0x7f010007;
+        /**  pull to refresh, otherwise release to refresh, default is release to refresh 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_pull_to_fresh=0x7f010006;
+        /**  the ration of the height of the header to trigger refresh 
+         <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_ratio_of_header_height_to_refresh=0x7f010003;
+        /**  the resistance when you are moving the frame 
+         <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_resistance=0x7f010002;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ptr_rotate_ani_time=0x7f010008;
     }
     public static final class color {
         public static final int btn_click_color=0x7f040000;
@@ -21,8 +90,8 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int account_login_bg=0x7f020000;
@@ -55,95 +124,96 @@ public final class R {
         public static final int ok_pressed=0x7f02001b;
         public static final int page_indicator=0x7f02001c;
         public static final int page_indicator_focused=0x7f02001d;
-        public static final int right_arrow_normal=0x7f02001e;
-        public static final int right_arrow_pressed=0x7f02001f;
-        public static final int scenepic_update_location=0x7f020020;
-        public static final int scenepic_update_location_pressed=0x7f020021;
-        public static final int search=0x7f020022;
-        public static final int search_friend=0x7f020023;
-        public static final int search_friend_pressed=0x7f020024;
-        public static final int search_pressed=0x7f020025;
-        public static final int shape_hot_city_button_normal=0x7f020026;
-        public static final int shape_hot_city_button_pressed=0x7f020027;
-        public static final int share_bkg_normal=0x7f020028;
-        public static final int share_bkg_pressed=0x7f020029;
-        public static final int share_dialog_bkg=0x7f02002a;
-        public static final int share_dialog_title_bkg=0x7f02002b;
-        public static final int share_divider_line=0x7f02002c;
-        public static final int share_icon_sina=0x7f02002d;
-        public static final int share_icon_tencent=0x7f02002e;
-        public static final int share_more_normal=0x7f02002f;
-        public static final int share_more_pressed=0x7f020030;
-        public static final int share_qq_normal=0x7f020031;
-        public static final int share_qq_pressed=0x7f020032;
-        public static final int share_sina_normal=0x7f020033;
-        public static final int share_sina_pressed=0x7f020034;
-        public static final int share_sms_normal=0x7f020035;
-        public static final int share_sms_pressed=0x7f020036;
-        public static final int share_tencent_normal=0x7f020037;
-        public static final int share_tencent_pressed=0x7f020038;
-        public static final int share_wxfriend_normal=0x7f020039;
-        public static final int share_wxfriend_pressed=0x7f02003a;
-        public static final int share_wxgroup_normal=0x7f02003b;
-        public static final int share_wxgroup_pressed=0x7f02003c;
-        public static final int skin_delete=0x7f02003d;
-        public static final int skin_delete_pressed=0x7f02003e;
-        public static final int skin_horizontal_divider=0x7f02003f;
-        public static final int splash=0x7f020040;
-        public static final int splash_indicator=0x7f020041;
-        public static final int splash_indicator_focused=0x7f020042;
-        public static final int t0=0x7f020043;
-        public static final int t2=0x7f020044;
-        public static final int t3=0x7f020045;
-        public static final int t4=0x7f020046;
-        public static final int t5=0x7f020047;
-        public static final int t6=0x7f020048;
-        public static final int t7=0x7f020049;
-        public static final int t8=0x7f02004a;
-        public static final int t9=0x7f02004b;
-        public static final int title_bar_back_btn=0x7f02004c;
-        public static final int title_bar_back_btn_pressed=0x7f02004d;
-        public static final int toggle_btn_checked=0x7f02004e;
-        public static final int toggle_btn_unchecked=0x7f02004f;
-        public static final int w0=0x7f020050;
-        public static final int w1=0x7f020051;
-        public static final int w10=0x7f020052;
-        public static final int w13=0x7f020053;
-        public static final int w14=0x7f020054;
-        public static final int w15=0x7f020055;
-        public static final int w16=0x7f020056;
-        public static final int w17=0x7f020057;
-        public static final int w18=0x7f020058;
-        public static final int w19=0x7f020059;
-        public static final int w2=0x7f02005a;
-        public static final int w20=0x7f02005b;
-        public static final int w21=0x7f02005c;
-        public static final int w29=0x7f02005d;
-        public static final int w3=0x7f02005e;
-        public static final int w30=0x7f02005f;
-        public static final int w31=0x7f020060;
-        public static final int w32=0x7f020061;
-        public static final int w33=0x7f020062;
-        public static final int w34=0x7f020063;
-        public static final int w35=0x7f020064;
-        public static final int w36=0x7f020065;
-        public static final int w4=0x7f020066;
-        public static final int w45=0x7f020067;
-        public static final int w5=0x7f020068;
-        public static final int w6=0x7f020069;
-        public static final int w7=0x7f02006a;
-        public static final int w8=0x7f02006b;
-        public static final int w9=0x7f02006c;
+        public static final int ptr_rotate_arrow=0x7f02001e;
+        public static final int right_arrow_normal=0x7f02001f;
+        public static final int right_arrow_pressed=0x7f020020;
+        public static final int scenepic_update_location=0x7f020021;
+        public static final int scenepic_update_location_pressed=0x7f020022;
+        public static final int search=0x7f020023;
+        public static final int search_friend=0x7f020024;
+        public static final int search_friend_pressed=0x7f020025;
+        public static final int search_pressed=0x7f020026;
+        public static final int shape_hot_city_button_normal=0x7f020027;
+        public static final int shape_hot_city_button_pressed=0x7f020028;
+        public static final int share_bkg_normal=0x7f020029;
+        public static final int share_bkg_pressed=0x7f02002a;
+        public static final int share_dialog_bkg=0x7f02002b;
+        public static final int share_dialog_title_bkg=0x7f02002c;
+        public static final int share_divider_line=0x7f02002d;
+        public static final int share_icon_sina=0x7f02002e;
+        public static final int share_icon_tencent=0x7f02002f;
+        public static final int share_more_normal=0x7f020030;
+        public static final int share_more_pressed=0x7f020031;
+        public static final int share_qq_normal=0x7f020032;
+        public static final int share_qq_pressed=0x7f020033;
+        public static final int share_sina_normal=0x7f020034;
+        public static final int share_sina_pressed=0x7f020035;
+        public static final int share_sms_normal=0x7f020036;
+        public static final int share_sms_pressed=0x7f020037;
+        public static final int share_tencent_normal=0x7f020038;
+        public static final int share_tencent_pressed=0x7f020039;
+        public static final int share_wxfriend_normal=0x7f02003a;
+        public static final int share_wxfriend_pressed=0x7f02003b;
+        public static final int share_wxgroup_normal=0x7f02003c;
+        public static final int share_wxgroup_pressed=0x7f02003d;
+        public static final int skin_delete=0x7f02003e;
+        public static final int skin_delete_pressed=0x7f02003f;
+        public static final int skin_horizontal_divider=0x7f020040;
+        public static final int splash=0x7f020041;
+        public static final int splash_indicator=0x7f020042;
+        public static final int splash_indicator_focused=0x7f020043;
+        public static final int t0=0x7f020044;
+        public static final int t2=0x7f020045;
+        public static final int t3=0x7f020046;
+        public static final int t4=0x7f020047;
+        public static final int t5=0x7f020048;
+        public static final int t6=0x7f020049;
+        public static final int t7=0x7f02004a;
+        public static final int t8=0x7f02004b;
+        public static final int t9=0x7f02004c;
+        public static final int title_bar_back_btn=0x7f02004d;
+        public static final int title_bar_back_btn_pressed=0x7f02004e;
+        public static final int toggle_btn_checked=0x7f02004f;
+        public static final int toggle_btn_unchecked=0x7f020050;
+        public static final int w0=0x7f020051;
+        public static final int w1=0x7f020052;
+        public static final int w10=0x7f020053;
+        public static final int w13=0x7f020054;
+        public static final int w14=0x7f020055;
+        public static final int w15=0x7f020056;
+        public static final int w16=0x7f020057;
+        public static final int w17=0x7f020058;
+        public static final int w18=0x7f020059;
+        public static final int w19=0x7f02005a;
+        public static final int w2=0x7f02005b;
+        public static final int w20=0x7f02005c;
+        public static final int w21=0x7f02005d;
+        public static final int w29=0x7f02005e;
+        public static final int w3=0x7f02005f;
+        public static final int w30=0x7f020060;
+        public static final int w31=0x7f020061;
+        public static final int w32=0x7f020062;
+        public static final int w33=0x7f020063;
+        public static final int w34=0x7f020064;
+        public static final int w35=0x7f020065;
+        public static final int w36=0x7f020066;
+        public static final int w4=0x7f020067;
+        public static final int w45=0x7f020068;
+        public static final int w5=0x7f020069;
+        public static final int w6=0x7f02006a;
+        public static final int w7=0x7f02006b;
+        public static final int w8=0x7f02006c;
+        public static final int w9=0x7f02006d;
     }
     public static final class id {
-        public static final int action_settings=0x7f070021;
+        public static final int action_settings=0x7f070026;
         public static final int btn_city_list=0x7f070006;
         /**  设置view的多个tag时，需要唯一的id 
          */
         public static final int btn_flag_first_tag=0x7f070000;
         public static final int btn_flag_secend_tag=0x7f070001;
         public static final int btn_share=0x7f070007;
-        public static final int button1=0x7f070020;
+        public static final int button1=0x7f070025;
         public static final int city_btn_addcity=0x7f07000a;
         public static final int city_btn_back=0x7f070009;
         public static final int city_btn_editorcity=0x7f07000b;
@@ -152,24 +222,29 @@ public final class R {
         public static final int city_list_scrollview_content=0x7f070010;
         public static final int city_list_search_button=0x7f07000e;
         public static final int city_list_search_text=0x7f07000d;
-        public static final int editor_city_cityname=0x7f070013;
-        public static final int editor_city_delete_button=0x7f070015;
-        public static final int editor_city_delete_flag=0x7f070011;
-        public static final int editor_city_temp=0x7f070014;
-        public static final int editor_city_weather_type=0x7f070012;
-        public static final int hot_city_list_item_button1=0x7f070016;
-        public static final int hot_city_list_item_button2=0x7f070017;
-        public static final int hot_city_list_item_button3=0x7f070018;
-        public static final int imageView1=0x7f07001f;
-        public static final int linearLayout1=0x7f070019;
-        public static final int loading_desc=0x7f07001b;
-        public static final int loading_porgressbar=0x7f07001a;
+        public static final int editor_city_cityname=0x7f070018;
+        public static final int editor_city_delete_button=0x7f07001a;
+        public static final int editor_city_delete_flag=0x7f070016;
+        public static final int editor_city_temp=0x7f070019;
+        public static final int editor_city_weather_type=0x7f070017;
+        public static final int hot_city_list_item_button1=0x7f07001b;
+        public static final int hot_city_list_item_button2=0x7f07001c;
+        public static final int hot_city_list_item_button3=0x7f07001d;
+        public static final int imageView1=0x7f070024;
+        public static final int linearLayout1=0x7f07001e;
+        public static final int loading_desc=0x7f070020;
+        public static final int loading_porgressbar=0x7f07001f;
         public static final int main_top_menu=0x7f070002;
-        public static final int page_TEMP=0x7f07001e;
+        public static final int page_TEMP=0x7f070023;
         public static final int page_indicator_container=0x7f070005;
-        public static final int page_publish_time=0x7f07001c;
-        public static final int page_weather_desc=0x7f07001d;
+        public static final int page_publish_time=0x7f070021;
+        public static final int page_weather_desc=0x7f070022;
         public static final int pages=0x7f070008;
+        public static final int ptr_classic_header_rotate_view=0x7f070014;
+        public static final int ptr_classic_header_rotate_view_header_last_update=0x7f070013;
+        public static final int ptr_classic_header_rotate_view_header_text=0x7f070011;
+        public static final int ptr_classic_header_rotate_view_header_title=0x7f070012;
+        public static final int ptr_classic_header_rotate_view_progressbar=0x7f070015;
         public static final int text_date=0x7f070004;
         public static final int text_title=0x7f070003;
     }
@@ -177,20 +252,31 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int city_editor=0x7f030001;
         public static final int city_list=0x7f030002;
-        public static final int editor_citylist_item=0x7f030003;
-        public static final int hot_city_list_item=0x7f030004;
-        public static final int loading=0x7f030005;
-        public static final int page_main=0x7f030006;
-        public static final int splash=0x7f030007;
-        public static final int test=0x7f030008;
+        public static final int cube_ptr_classic_default_header=0x7f030003;
+        public static final int cube_ptr_simple_loading=0x7f030004;
+        public static final int editor_citylist_item=0x7f030005;
+        public static final int hot_city_list_item=0x7f030006;
+        public static final int loading=0x7f030007;
+        public static final int page_main=0x7f030008;
+        public static final int splash=0x7f030009;
+        public static final int test=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060002;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060001;
+        public static final int action_settings=0x7f05000b;
+        public static final int app_name=0x7f050009;
+        public static final int cube_ptr_hours_ago=0x7f050008;
+        public static final int cube_ptr_last_update=0x7f050005;
+        public static final int cube_ptr_minutes_ago=0x7f050007;
+        public static final int cube_ptr_pull_down=0x7f050000;
+        public static final int cube_ptr_pull_down_to_refresh=0x7f050001;
+        public static final int cube_ptr_refresh_complete=0x7f050004;
+        public static final int cube_ptr_refreshing=0x7f050003;
+        public static final int cube_ptr_release_to_refresh=0x7f050002;
+        public static final int cube_ptr_seconds_ago=0x7f050006;
+        public static final int hello_world=0x7f05000a;
     }
     public static final class style {
         /** 
@@ -220,4 +306,175 @@ public final class R {
          */
         public static final int AppTheme=0x7f080001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a PtrClassicHeader.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PtrClassicHeader_ptr_rotate_ani_time com.example.weather:ptr_rotate_ani_time}</code></td><td></td></tr>
+           </table>
+           @see #PtrClassicHeader_ptr_rotate_ani_time
+         */
+        public static final int[] PtrClassicHeader = {
+            0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.weather.R.attr#ptr_rotate_ani_time}
+          attribute's value can be found in the {@link #PtrClassicHeader} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.weather:ptr_rotate_ani_time
+        */
+        public static final int PtrClassicHeader_ptr_rotate_ani_time = 0;
+        /** Attributes that can be used with a PtrFrameLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_content com.example.weather:ptr_content}</code></td><td></td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_duration_to_close com.example.weather:ptr_duration_to_close}</code></td><td></td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_duration_to_close_header com.example.weather:ptr_duration_to_close_header}</code></td><td></td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_header com.example.weather:ptr_header}</code></td><td> Optional.</td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_keep_header_when_refresh com.example.weather:ptr_keep_header_when_refresh}</code></td><td> keep header when refreshing</td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_pull_to_fresh com.example.weather:ptr_pull_to_fresh}</code></td><td> pull to refresh, otherwise release to refresh, default is release to refresh </td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_ratio_of_header_height_to_refresh com.example.weather:ptr_ratio_of_header_height_to_refresh}</code></td><td> the ration of the height of the header to trigger refresh </td></tr>
+           <tr><td><code>{@link #PtrFrameLayout_ptr_resistance com.example.weather:ptr_resistance}</code></td><td> the resistance when you are moving the frame </td></tr>
+           </table>
+           @see #PtrFrameLayout_ptr_content
+           @see #PtrFrameLayout_ptr_duration_to_close
+           @see #PtrFrameLayout_ptr_duration_to_close_header
+           @see #PtrFrameLayout_ptr_header
+           @see #PtrFrameLayout_ptr_keep_header_when_refresh
+           @see #PtrFrameLayout_ptr_pull_to_fresh
+           @see #PtrFrameLayout_ptr_ratio_of_header_height_to_refresh
+           @see #PtrFrameLayout_ptr_resistance
+         */
+        public static final int[] PtrFrameLayout = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.weather.R.attr#ptr_content}
+          attribute's value can be found in the {@link #PtrFrameLayout} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.weather:ptr_content
+        */
+        public static final int PtrFrameLayout_ptr_content = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.weather.R.attr#ptr_duration_to_close}
+          attribute's value can be found in the {@link #PtrFrameLayout} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.weather:ptr_duration_to_close
+        */
+        public static final int PtrFrameLayout_ptr_duration_to_close = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.example.weather.R.attr#ptr_duration_to_close_header}
+          attribute's value can be found in the {@link #PtrFrameLayout} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.weather:ptr_duration_to_close_header
+        */
+        public static final int PtrFrameLayout_ptr_duration_to_close_header = 5;
+        /**
+          <p>
+          @attr description
+           Optional. If you put header and content in xml, you can you these to specify them. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name com.example.weather:ptr_header
+        */
+        public static final int PtrFrameLayout_ptr_header = 0;
+        /**
+          <p>
+          @attr description
+           keep header when refreshing
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.example.weather:ptr_keep_header_when_refresh
+        */
+        public static final int PtrFrameLayout_ptr_keep_header_when_refresh = 7;
+        /**
+          <p>
+          @attr description
+           pull to refresh, otherwise release to refresh, default is release to refresh 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.example.weather:ptr_pull_to_fresh
+        */
+        public static final int PtrFrameLayout_ptr_pull_to_fresh = 6;
+        /**
+          <p>
+          @attr description
+           the ration of the height of the header to trigger refresh 
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.example.weather:ptr_ratio_of_header_height_to_refresh
+        */
+        public static final int PtrFrameLayout_ptr_ratio_of_header_height_to_refresh = 3;
+        /**
+          <p>
+          @attr description
+           the resistance when you are moving the frame 
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.example.weather:ptr_resistance
+        */
+        public static final int PtrFrameLayout_ptr_resistance = 2;
+    };
 }

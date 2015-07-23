@@ -37,15 +37,16 @@
 		        android:text="多云转阴">
 		    </TextView>
 		    
-	        <TextView 
-		        android:id="@+id/page_TEMP"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_gravity="center_horizontal"
-		        android:layout_marginTop="20dp"
-		        android:textSize="40sp"
-		        android:textColor="#009ad6"
-		        android:text="21°C~30°C">
+	        <TextView
+	            android:id="@+id/page_TEMP"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:layout_marginTop="20dp"
+	            android:text="21°C~30°C"
+	            android:textColor="#fffffb"
+	            android:textSize="40sp" >
+
 		    </TextView>
 	    </LinearLayout>
         
