@@ -1,2 +1,2 @@
 # Weather
-A weather app
+A simple weather app
